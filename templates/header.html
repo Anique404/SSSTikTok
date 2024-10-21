@@ -117,7 +117,7 @@
             background-color: green;
         }
        
-        @media (max-width: 768px) {
+        @media all and (max-width: 768px) {
             .upper {
                 display: flex;
                 flex-direction: column; /* Stack items vertically */
@@ -166,7 +166,7 @@
             }
         }
 
-        @media (max-width: 607px) {
+        @media all and (max-width: 608px) {
             .upper {
                 display: flex;
                 flex-direction: column; /* Stack items vertically */
@@ -335,7 +335,7 @@
             color: blue; /* Change color on hover */
         }
       
-        @media (max-width:768) {
+        @media all and (max-width:768px) {
             footer {
                 display: flex;
                 flex-direction: column; /* Stack content vertically */
@@ -352,6 +352,29 @@
             .footer-right {
                 display: flex;
                 gap: 70px; /* Space between the links */
+                margin-top: 20px; /* Space between the text and the links */
+                font-weight:70;
+                font-size:20px;
+            }
+        }
+
+        @media all and (max-width:608px) {
+            footer {
+                display: flex;
+                flex-direction: column; /* Stack content vertically */
+                justify-content: center; /* Center content */
+                align-items: center; /* Center horizontally */
+                background-color: white;
+                color: black;
+                padding: 20px; /* Padding around the footer */
+                height: 120px; /* Increased height for better spacing */
+                margin-top: 10px; /* Space above the footer */
+                box-shadow: 0 -8px 15px rgba(0, 0, 0, 0); /* Deep shadow above the footer */
+                border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
+            }
+            .footer-right {
+                display: flex;
+                gap: 60px; /* Space between the links */
                 margin-top: 20px; /* Space between the text and the links */
                 font-weight:70;
                 font-size:20px;
@@ -378,12 +401,36 @@
 }
 .text{
     margin-top:40px;
-    width:100%%;
+    width:607px;
     font-weight:800;
     font-size:20px;
-    margin-left: 29px;
-    margin-right: 29px;
+    margin-left: 30px;
+    margin-right: 30px;
 
+}
+
+@media all and (max-width:768px){
+    .text{
+        margin-top:40px;
+        width:700px;
+        font-weight:600;
+        font-size: 18px;
+        margin-left: 30px;
+        margin-right: 30px;
+    
+    }
+}
+
+@media all and (max-width:608px){
+    .text{
+        margin-top:40px;
+        width: 570px;
+        font-weight:500;
+        font-size:15px;
+        margin-left: 30px;
+        margin-right: 30px;
+    
+    }
 }
 
 
@@ -400,10 +447,25 @@
 }
 
 
-@media (max-width:768px){
+@media all and (max-width:768px){
     .steps{
         width:600px;
         height:400px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite; /* Gradient animation */
+        margin-top:40px;
+        margin-bottom:40px;
+        border-radius:30px;
+        
+    }
+
+}
+
+@media all and (max-width:608px){
+    .steps{
+        width:400px;
+        height:500px;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite; /* Gradient animation */
@@ -482,7 +544,7 @@ p {
 }
 
 
-@media (max-width:768px){
+@media all and (max-width:768px){
 
     .write {
         width: 768px; /* Keep the overall width for your content */
@@ -540,10 +602,66 @@ p {
         font-weight:80;
         font-size:20px;
     }
-
-
-
 }
+
+@media all and (max-width:608px){
+
+    .write {
+        width: 608px; /* Keep the overall width for your content */
+        justify-content:center;
+        align-items:center;
+        font-weight:40;
+        font-size:15px;
+        margin-left: 30px;
+        margin-right: 70px;
+    }
+    
+    .mobile {
+        
+        margin-left: 80px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        gap:90px;
+        justify-content:center;
+        align-items:center;
+        margin-bottom: 40px;
+    
+        
+    }
+    
+    
+    .content {
+        justify-content:center;
+        align-items:center;
+        flex: 1; /* Allow the content to take remaining space */
+         /* Minimal left margin to create space between image and content */
+    }
+    
+    
+    
+    img {
+        max-width: 200px; /* Set a maximum width for images */
+        height: 200px; /* Maintain image height */
+    }
+    
+    h2 {
+        margin: 10px 0;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    
+    p {
+        margin: 5px 0;
+        line-height: 1.5;
+        justify-content:center;
+        align-items:center;
+        font-weight:80;
+        font-size:20px;
+    }
+}
+
 .service-cards {
     display: flex; /* Use flexbox for layout */
     gap: 40px; /* Space between cards */
@@ -553,6 +671,29 @@ p {
     padding-left: 250px; /* Left padding */
     padding-right: 250px; /* Right padding */
     margin-bottom: 50px;
+}
+
+@media (max-width: 608px){
+       .keyfeature{
+        font-weight: 600; /* Bold */
+        font-size: 22px; /* Adjust size as needed */
+       }
+
+    .service-cards {
+        display: flex; /* Use flexbox for layout */
+        gap: 40px; /* Space between cards */
+        max-width: 608px; /* Optional: limit the max width */
+        justify-content: center; /* Center the cards */
+        align-items: flex-start; /* Align items at the start of the container */
+        padding-left: 250px; /* Left padding */
+        padding-right: 250px; /* Right padding */
+        margin-bottom: 50px;
+    }
+    .service-card p{
+        font-weight: 400; /* Bold */
+        font-size: 18px; /* Adjust size as needed */
+    }
+
 }
 
 
@@ -598,7 +739,7 @@ p {
     font-size: 22px; /* Adjust size as needed */
 }
 
-@media (max-width:768px){
+@media all and (max-width:768px){
 
     .FAQ{
         padding-left:100px;
@@ -608,8 +749,16 @@ p {
     }
     
 }
+@media all and (max-width:608px){
 
-
+    .FAQ{
+        padding-left:100px;
+        padding-right:100px;
+        font-weight: 400; /* Bold */
+        font-size: 18px; /* Adjust size as needed */
+    }
+    
+}
 
 
 
