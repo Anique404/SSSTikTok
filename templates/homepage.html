@@ -1,0 +1,406 @@
+{% include "header.html" %}
+<div class="upper">
+    <h1 id="main-title">SSSTikTok</h1>
+    <br>
+    <h3 id="subtitle">TikTok Video Downloader Without Watermark</h3>
+    <br>
+    <form action="/download" method="post" onsubmit="showProgress();">
+        <input id="mainMessage" type="text" name="url" placeholder="Enter TikTok Video URL" required>
+        <button type="submit" class="bt"><i class="fas fa-download"></i> Download</button>
+    </form>
+
+    <div id="progress-container" style="display: none;">
+        <div id="progress-bar" style="width: 0%;"></div>
+    </div>
+
+    {% if message %}
+    <p class="message {{ 'success' if 'successfully' in message else 'error' }}">{{ message }}</p>
+    {% endif %}
+</div>
+<main>
+    <center>
+
+        <div class="text" id="ssstiktok-description">
+            <p>
+                SSSTikTok is a tool that allows you to download the TikTok videos without a watermark. 
+                It is a free tool, meaning you do not have to pay to get the videos. Additionally, you do not need to install
+                any app, as this website is available in your browser. It downloads the video in HD quality, and the sound quality is also excellent.
+            </p>
+        </div>
+        
+        <div id="how-to-download">
+            <div class="text">
+                <h2 id="download-title">How to download the TikTok video without a watermark?</h2>
+                <p id="download-intro">There are three steps to download the TikTok reel.</p>
+            </div>
+        
+            <div class="steps" id="download-steps">
+                <div class="sol">
+                    <center> 
+                        <h3 id="step-1">1-Find a TikTok</h3>
+                        <p id="step-1-desc">Open the TikTok app and find the clip that you want to get the reel without a watermark.</p>
+                        <br>
+                        <h3 id="step-2">2-Copy URL</h3>
+                        <p id="step-2-desc">On the right side, you will see the option to copy the link. Tap on it to copy the link of the clip which you want to save on your mobile phone.</p>
+                        <br>
+                        <h3 id="step-3">3-Paste the link</h3>
+                        <p id="step-3-desc">Go to the SSSTikTok website, paste the copied link, and the clip will save without a watermark.</p>
+                    </center>
+                </div>
+            </div>
+        </div>
+        
+        <div class="write">
+            <div class="mobile" id="mobile-download">
+                <div class="img">
+                    <img src="/static/1000_F_134678390_VGjr3uMVwVibu7obxeAQ42lfPIvgQaOm.jpg" alt="TikTok Download" id="mobile-download-image">
+                </div>
+                <div class="content">
+                    <center>
+                        <h2 id="mobile-download-title">Download TikTok video on your mobile phone</h2>
+                        <p id="mobile-download-desc">If you want to save a TikTok on your mobile, go to that reel and tap on the option on the right side. 
+                            On the right side, click the share option and copy the link. Then, go to SSSTikTok.my,
+                            paste the link into the input box, and click Download. Your video will be saved in just a few seconds.
+                        </p>
+                    </center>
+                </div>
+            </div>
+        
+            <div class="mobile" id="pc-download">
+                <div class="content">
+                    <center>
+                        <h2 id="pc-download-title">Online TikTok downloader app for PC</h2>
+                        <p id="pc-download-desc">
+                            If you want to save a video on your PC, one advantage is that you do not need to install the TikTok app. You just need to go to your browser, 
+                            type TikTok and open the website. Once it is open, go to the video that you want to save without a watermark. On the right side, click the share option and copy the link.
+                            Then, go to SSSTikTok.my, paste the link into the input box, and click Download. Your TikTok video will be saved without a watermark.
+                        </p>
+                    </center>
+                </div>
+                <div class="img">
+                    <img src="/static/laptop.jpg" alt="TikTok Download" id="pc-download-image">
+                </div>
+            </div>
+        </div>
+        
+        <center>
+            <h1 class="keyfeature" id="key-features-title">Key Features of SSSTikTok</h1>
+            <div class="service-cards" id="service-cards">
+                <div>
+                    <div class="service-card" id="service-card-1">
+                        <div class="icon">
+                            <i class="fas fa-video"></i> <!-- Post Editing Icon -->
+                        </div>
+                        <p id="service-desc-1">It is a suitable solution for post-editing and publishing videos.</p>
+                    </div>
+                    <div class="service-card" id="service-card-2">
+                        <div class="icon">
+                            <i class="fas fa-download"></i> <!-- Free Download Icon -->
+                        </div>
+                        <p id="service-desc-2">It is completely free, and you can get as many videos as you want.</p>
+                    </div>
+                    <div class="service-card" id="service-card-3">
+                        <div class="icon">
+                            <i class="fas fa-globe"></i> <!-- No Download Requirement Icon -->
+                        </div>
+                        <p id="service-desc-3">There is no requirement to get the video. Just open the website and download the video.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="service-card" id="service-card-4">
+                        <div class="icon">
+                            <i class="fas fa-check-circle"></i> <!-- Download Without Watermark Icon -->
+                        </div>
+                        <p id="service-desc-4">You can get TikTok videos without a watermark at MAX speed.</p>
+                    </div>
+                    <div class="service-card" id="service-card-5">
+                        <div class="icon">
+                            <i class="fas fa-file-video"></i> <!-- Save as MP4 Icon -->
+                        </div>
+                        <p id="service-desc-5">Save TikTok videos without a watermark in mp4.</p>
+                    </div>
+                    <div class="service-card" id="service-card-6">
+                        <div class="icon">
+                            <i class="fas fa-desktop"></i> <!-- Browser Compatibility Icon -->
+                        </div>
+                        <p id="service-desc-6">SSSTikTok downloader works in every browser.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <h2 class="faqTitle"id="faqs-title">FAQs</h2>
+            <br>
+            <div class="FAQ" id="faqs">
+                <p class="questions" id="faq-1">Do I have to pay to get the TikTok videos from your websites?</p>
+                <p id="faq-1-answer">No, it is completely free. You do not even need to register to use it, and it works on all modern browsers.</p>
+                <br>
+        
+                <p class="questions" id="faq-2">Why should we choose your website and not others?</p>
+                <p id="faq-2-answer">Because it is very simple to use. Anyone can easily access this website, and it will provide you HD quality videos.
+                    Plus, the sound quality is excellent.
+                </p>
+                <br>
+        
+                <p class="questions" id="faq-3">Do I need to install anything to use this website?</p>
+                <p id="faq-3-answer">No, you do not need to install anything to use this website. Additionally, you do not even need to log in to use it. 
+                    You can easily get the videos without having to install any software.</p>
+                <br>
+        
+                <p class="questions" id="faq-4">Do I need an account to download videos from this website?</p>
+                <p id="faq-4-answer">No, you do not need an account to download videos from this website. Just provide the link to the clip, and it will save the TikTok clip in a few seconds.</p>
+                <br>
+        
+                <p class="questions" id="faq-5">Where can we find the link to a TikTok video?</p>
+                <p id="faq-5-answer">When you open the TikTok app, you will see a clip you want to download. On the right side, there is a share option. 
+                    You need to click on that, and then you will see an option to "Copy Link." Select that option, go to SSSTikTok.my, paste the link there, and click on download. This way, your video will be saved.
+                </p>
+                <br>
+        
+                <p class="questions" id="faq-6">When we download this video, where will we find it?</p>
+                <p id="faq-6-answer">When you get this video, you will find it in your User Download folder.</p>
+                <br>
+            </div>
+        </div>
+        
+
+
+
+
+
+    </center>
+ 
+    
+</main>
+
+<script>
+    function showProgress() {
+        const progressContainer = document.getElementById("progress-container");
+        const progressBar = document.getElementById("progress-bar");
+        const messageElement = document.querySelector(".message");
+
+        // Reset message visibility
+        if (messageElement) {
+            messageElement.style.display = "none"; // Hide message on new download
+        }
+
+        progressBar.style.width = '0%';  // Reset the progress bar
+        progressContainer.style.display = "block";  // Show the progress container
+
+        // Simulate progress updates (this should be linked to your actual progress)
+        let progress = 0;
+        const interval = setInterval(() => {
+            if (progress < 100) {
+                progress++;
+                progressBar.style.width = progress + "%";
+                progressBar.textContent = progress + "%";
+            } else {
+                clearInterval(interval);
+                alert("Your video is successfully downloaded!"); // You can replace this with your message logic
+            }
+        }, 100);  // Adjust timing as necessary
+    }
+</script>
+
+
+
+<script>
+    const translations = {
+        en: {
+            title: "SSSTikTok",
+            subtitle: "TikTok Video Downloader Without Watermark",
+            button: "Download",
+            success: "Download successful!",
+            error: "An error occurred.",
+            footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. All rights reserved.",
+            mainMessage: "Enter TikTok Video URL",
+            contact: "Contact",
+            privacyPolicy: "Privacy Policy",
+            terms: "Terms and Conditions",
+            button: "Download",
+            descriptionText: "SSSTikTok is a tool that allows you to download TikTok videos without a watermark. It is a free tool, meaning you do not have to pay to get the videos. Additionally, you do not need to install any app, as this website is available in your browser. It downloads the video in HD quality, and the sound quality is also excellent.",
+            downloadTitle: "How to download the TikTok video without a watermark?",
+            downloadIntro: "There are three steps to download the TikTok reel.",
+            step1: "1-Find a TikTok",
+            step1Desc: "Open the TikTok app and find the clip that you want to get the reel without a watermark.",
+            step2: "2-Copy URL",
+            step2Desc: "On the right side, you will see the option to copy the link. Tap on it to copy the link of the clip which you want to save on your mobile phone.",
+            step3: "3-Paste the link",
+            step3Desc: "Go to the SSSTikTok website, paste the copied link, and the clip will save without a watermark.",
+            mobileDownloadTitle: "Download TikTok video on your mobile phone",
+            mobileDownloadDesc: "If you want to save a TikTok on your mobile, go to that reel and tap on the option on the right side. On the right side, click the share option and copy the link. Then, go to SSSTikTok.my, paste the link into the input box, and click Download. Your video will be saved in just a few seconds.",
+            pcDownloadTitle: "Online TikTok downloader app for PC",
+            pcDownloadDesc: "If you want to save a video on your PC, one advantage is that you do not need to install the TikTok app. You just need to go to your browser, type TikTok and open the website. Once it is open, go to the video that you want to save without a watermark. On the right side, click the share option and copy the link. Then, go to SSSTikTok.my, paste the link into the input box, and click Download. Your TikTok video will be saved without a watermark.",
+            keyFeaturesTitle: "Key Features of SSSTikTok",
+            faqsTitle: "FAQs",
+            faq1: "Do I have to pay to get the TikTok videos from your websites?",
+            faq1Answer: "No, it is completely free. You do not even need to register to use it, and it works on all modern browsers.",
+            faq2: "Why should we choose your website and not others?",
+            faq2Answer: "Because it is very simple to use. Anyone can easily access this website, and it will provide you HD quality videos. Plus, the sound quality is excellent.",
+            faq3: "Do I need to install anything to use this website?",
+            faq3Answer: "No, you do not need to install anything to use this website. Additionally, you do not even need to log in to use it. You can easily get the videos without having to install any software.",
+            faq4: "Do I need an account to download videos from this website?",
+            faq4Answer: "No, you do not need an account to download videos from this website. Just provide the link to the clip, and it will save the TikTok clip in a few seconds.",
+            faq5: "Where can we find the link to a TikTok video?",
+            faq5Answer: "When you open the TikTok app, you will see a clip you want to download. On the right side, there is a share option. You need to click on that, and then you will see an option to 'Copy Link.' Select that option, go to SSSTikTok.my, paste the link there, and click on download. This way, your video will be saved.",
+            faq6: "When we download this video, where will we find it?",
+            faq6Answer: "When you get this video, you will find it in your User Download folder.",
+            
+            
+            
+
+            
+        },
+        id: {
+            title: "SSSTikTok",
+            subtitle: "Pengunduh Video TikTok Tanpa Watermark",
+            button: "Unduh",
+            success: "Unduh berhasil!",
+            error: "Terjadi kesalahan.",
+            footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak dilindungi.",
+            mainMessage: "Masukkan URL Video TikTok",
+            contact: "Kontak",
+            privacyPolicy: "Kebijakan Privasi",
+            terms: "Syarat dan Ketentuan",
+            button: "Unduh", 
+            descriptionText: "SSSTikTok adalah alat yang memungkinkan Anda mengunduh video TikTok tanpa watermark. Ini adalah alat gratis, artinya Anda tidak perlu membayar untuk mendapatkan video. Selain itu, Anda tidak perlu menginstal aplikasi, karena situs web ini tersedia di browser Anda. Ini mengunduh video dalam kualitas HD, dan kualitas suara juga sangat baik.",
+            downloadTitle: "Bagaimana cara mengunduh video TikTok tanpa watermark?",
+            downloadIntro: "Ada tiga langkah untuk mengunduh reel TikTok.",
+            step1: "1-Cari TikTok",
+            step1Desc: "Buka aplikasi TikTok dan temukan cuplikan yang ingin Anda ambil tanpa watermark.",
+            step2: "2-Salin URL",
+            step2Desc: "Di sisi kanan, Anda akan melihat opsi untuk menyalin tautan. Ketuk itu untuk menyalin tautan cuplikan yang ingin Anda simpan di ponsel Anda.",
+            step3: "3-Paste tautan",
+            step3Desc: "Pergi ke situs web SSSTikTok, tempel tautan yang disalin, dan cuplikan akan disimpan tanpa watermark.",
+            mobileDownloadTitle: "Unduh video TikTok di ponsel Anda",
+            mobileDownloadDesc: "Jika Anda ingin menyimpan TikTok di ponsel Anda, pergi ke reel itu dan ketuk opsi di sisi kanan. Di sisi kanan, klik opsi berbagi dan salin tautan. Kemudian, pergi ke SSSTikTok.my, tempel tautan ke dalam kotak input, dan klik Unduh. Video Anda akan disimpan dalam beberapa detik.",
+            pcDownloadTitle: "Aplikasi pengunduh TikTok online untuk PC",
+            pcDownloadDesc: "Jika Anda ingin menyimpan video di PC Anda, satu keuntungan adalah bahwa Anda tidak perlu menginstal aplikasi TikTok. Anda hanya perlu pergi ke browser Anda, ketik TikTok dan buka situs webnya. Setelah terbuka, pergi ke video yang ingin Anda simpan tanpa watermark. Di sisi kanan, klik opsi berbagi dan salin tautan. Kemudian, pergi ke SSSTikTok.my, tempel tautan ke dalam kotak input, dan klik Unduh. Video TikTok Anda akan disimpan tanpa watermark.",
+            keyFeaturesTitle: "Fitur Utama SSSTikTok",
+            faqsTitle: "FAQ",
+            faq1: "Apakah saya harus membayar untuk mendapatkan video TikTok dari situs web Anda?",
+            faq1Answer: "Tidak, ini sepenuhnya gratis. Anda bahkan tidak perlu mendaftar untuk menggunakannya, dan itu berfungsi di semua browser modern.",
+            faq2: "Mengapa kami harus memilih situs web Anda dan bukan yang lain?",
+            faq2Answer: "Karena sangat mudah digunakan. Siapa pun dapat dengan mudah mengakses situs web ini, dan itu akan memberikan video berkualitas HD. Selain itu, kualitas suaranya sangat baik.",
+            faq3: "Apakah saya perlu menginstal apa pun untuk menggunakan situs web ini?",
+            faq3Answer: "Tidak, Anda tidak perlu menginstal apa pun untuk menggunakan situs web ini. Selain itu, Anda bahkan tidak perlu masuk untuk menggunakannya. Anda dapat dengan mudah mendapatkan video tanpa harus menginstal perangkat lunak apa pun.",
+            faq4: "Apakah saya perlu akun untuk mengunduh video dari situs web ini?",
+            faq4Answer: "Tidak, Anda tidak perlu akun untuk mengunduh video dari situs web ini. Cukup berikan tautan ke cuplikan, dan itu akan menyimpan cuplikan TikTok dalam beberapa detik.",
+            faq5: "Di mana kami dapat menemukan tautan ke video TikTok?",
+            faq5Answer: "Ketika Anda membuka aplikasi TikTok, Anda akan melihat cuplikan yang ingin Anda unduh. Di sisi kanan, ada opsi berbagi. Anda perlu mengkliknya, dan kemudian Anda akan melihat opsi untuk 'Salin Tautan.' Pilih opsi itu, pergi ke SSSTikTok.my, tempel tautan di sana, dan klik unduh. Dengan cara ini, video Anda akan disimpan.",
+            faq6: "Ketika kami mengunduh video ini, di mana kami akan menemukannya?",
+            faq6Answer: "Ketika Anda mendapatkan video ini, Anda akan menemukannya di folder Unduhan Pengguna Anda.",
+            
+            
+           
+
+            
+        },
+        ms: {
+            title: "SSSTikTok",
+            subtitle: "Pengunduh Video TikTok Tanpa Tanda Air",
+            button: "Muat Turun",
+            success: "Muat turun berjaya!",
+            error: "Ralat telah berlaku.",
+            footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak terpelihara.",
+            mainMessage: "Masukkan URL Video TikTok",
+            contact: "Hubungi",
+            privacyPolicy: "Dasar Privasi",
+            terms: "Terma dan Syarat",
+            button: "Muat Turun",
+            descriptionText: "SSSTikTok adalah alat yang membolehkan anda memuat turun video TikTok tanpa tanda air. Ia adalah alat percuma, bermakna anda tidak perlu membayar untuk mendapatkan video. Selain itu, anda tidak perlu memasang sebarang aplikasi, kerana laman web ini tersedia di pelayar anda. Ia memuat turun video dalam kualiti HD, dan kualiti bunyi juga sangat baik.",
+            downloadTitle: "Bagaimana untuk memuat turun video TikTok tanpa tanda air?",
+            downloadIntro: "Terdapat tiga langkah untuk memuat turun reel TikTok.",
+            step1: "1-Cari TikTok",
+            step1Desc: "Buka aplikasi TikTok dan cari klip yang anda ingin ambil tanpa tanda air.",
+            step2: "2-Salin URL",
+            step2Desc: "Di sebelah kanan, anda akan melihat pilihan untuk menyalin pautan. Ketik padanya untuk menyalin pautan klip yang anda ingin simpan di telefon bimbit anda.",
+            step3: "3-Paste pautan",
+            step3Desc: "Pergi ke laman web SSSTikTok, tampal pautan yang disalin, dan klip akan disimpan tanpa tanda air.",
+            mobileDownloadTitle: "Muat turun video TikTok di telefon bimbit anda",
+            mobileDownloadDesc: "Jika anda ingin menyimpan TikTok di telefon bimbit anda, pergi ke reel itu dan ketik pada pilihan di sebelah kanan. Di sebelah kanan, klik pilihan kongsi dan salin pautan. Kemudian, pergi ke SSSTikTok.my, tampal pautan ke dalam kotak input, dan klik Muat Turun. Video anda akan disimpan dalam beberapa saat.",
+            pcDownloadTitle: "Aplikasi pengunduh TikTok dalam talian untuk PC",
+            pcDownloadDesc: "Jika anda ingin menyimpan video di PC anda, satu kelebihan adalah anda tidak perlu memasang aplikasi TikTok. Anda hanya perlu pergi ke pelayar anda, taip TikTok dan buka laman web tersebut. Setelah dibuka, pergi ke video yang ingin anda simpan tanpa tanda air. Di sebelah kanan, klik pilihan kongsi dan salin pautan. Kemudian, pergi ke SSSTikTok.my, tampal pautan ke dalam kotak input, dan klik Muat Turun. Video TikTok anda akan disimpan tanpa tanda air.",
+            keyFeaturesTitle: "Ciri Utama SSSTikTok",
+            faqsTitle: "Soalan Lazim",
+            faq1: "Adakah saya perlu membayar untuk mendapatkan video TikTok dari laman web anda?",
+            faq1Answer: "Tidak, ia sepenuhnya percuma. Anda tidak perlu mendaftar untuk menggunakannya, dan ia berfungsi di semua pelayar moden.",
+            faq2: "Mengapa kami perlu memilih laman web anda dan bukannya yang lain?",
+            faq2Answer: "Kerana ia sangat mudah digunakan. Sesiapa sahaja boleh mengakses laman web ini dengan mudah, dan ia akan memberikan anda video berkualiti HD. Selain itu, kualiti bunyi sangat baik.",
+            faq3: "Adakah saya perlu memasang apa-apa untuk menggunakan laman web ini?",
+            faq3Answer: "Tidak, anda tidak perlu memasang apa-apa untuk menggunakan laman web ini. Selain itu, anda tidak perlu log masuk untuk menggunakannya. Anda boleh dengan mudah mendapatkan video tanpa perlu memasang sebarang perisian.",
+            faq4: "Adakah saya perlu akaun untuk memuat turun video dari laman web ini?",
+            faq4Answer: "Tidak, anda tidak perlu akaun untuk memuat turun video dari laman web ini. Cukup berikan pautan kepada cuplikan, dan ia akan menyimpan cuplikan TikTok dalam beberapa saat.",
+            faq5: "Di mana kami boleh mencari pautan ke video TikTok?",
+            faq5Answer: "Apabila anda membuka aplikasi TikTok, anda akan melihat cuplikan yang ingin anda muat turun. Di sebelah kanan, terdapat pilihan berkongsi. Anda perlu mengkliknya, dan kemudian anda akan melihat pilihan untuk 'Salin Pautan.' Pilih pilihan itu, pergi ke SSSTikTok.my, tampal pautan di sana, dan klik muat turun. Dengan cara ini, video anda akan disimpan.",
+            faq6: "Apabila kami memuat turun video ini, di mana kami akan menemuinya?",
+            faq6Answer: "Apabila anda mendapatkan video ini, anda akan menemuinya di folder Muat Turun Pengguna anda.",
+
+            
+            
+        }
+    };
+    
+    function changeLanguage() {
+        const languageSelector = document.getElementById('language-selector');
+        const selectedLanguage = languageSelector.value;
+        console.log("Selected Language:", selectedLanguage);
+        const translation = translations[selectedLanguage];
+
+        if (translation) {
+            document.getElementById('main-title').textContent = translation.title;
+            document.getElementById('subtitle').textContent = translation.subtitle;
+            document.getElementById('footer-text').innerHTML = translation.footer;
+            document.getElementById('contact-link').textContent = translation.contact;
+            document.getElementById('privacy-policy-link').textContent = translation.privacyPolicy;
+            document.getElementById('terms-link').textContent = translation.terms;
+            document.getElementById('mainMessage').placeholder = translation.mainMessage;
+            document.querySelector('.bt').textContent = translation.button;
+            document.getElementById('ssstiktok-description').textContent = translation.descriptionText;
+
+            // Update download instructions
+            document.getElementById('download-title').textContent = translation.downloadTitle;
+            document.getElementById('download-intro').textContent = translation.downloadIntro;
+            document.getElementById('step-1').textContent = translation.step1;
+            document.getElementById('step-1-desc').textContent = translation.step1Desc;
+            document.getElementById('step-2').textContent = translation.step2;
+            document.getElementById('step-2-desc').textContent = translation.step2Desc;
+            document.getElementById('step-3').textContent = translation.step3;
+            document.getElementById('step-3-desc').textContent = translation.step3Desc;
+
+            // Update mobile download section
+            document.getElementById('mobile-download-title').textContent = translation.mobileDownloadTitle;
+            document.getElementById('mobile-download-desc').textContent = translation.mobileDownloadDesc;
+
+            // Update PC download section
+            document.getElementById('pc-download-title').textContent = translation.pcDownloadTitle;
+            document.getElementById('pc-download-desc').textContent = translation.pcDownloadDesc;
+
+            // Update key features title
+            document.getElementById('key-features-title').textContent = translation.keyFeaturesTitle;
+
+            // Update FAQs
+            document.getElementById('faqs-title').textContent = translation.faqsTitle;
+            document.getElementById('faq-1').textContent = translation.faq1;
+            document.getElementById('faq-1-answer').textContent = translation.faq1Answer;
+            document.getElementById('faq-2').textContent = translation.faq2;
+            document.getElementById('faq-2-answer').textContent = translation.faq2Answer;
+            document.getElementById('faq-3').textContent = translation.faq3;
+            document.getElementById('faq-3-answer').textContent = translation.faq3Answer;
+            document.getElementById('faq-4').textContent = translation.faq4;
+            document.getElementById('faq-4-answer').textContent = translation.faq4Answer;
+            document.getElementById('faq-5').textContent = translation.faq5;
+            document.getElementById('faq-5-answer').textContent = translation.faq5Answer;
+            document.getElementById('faq-6').textContent = translation.faq6;
+            document.getElementById('faq-6-answer').textContent = translation.faq6Answer;
+
+
+           
+            
+        }
+    }
+</script>
+
+
+
+
+{% include "footer.html" %}
