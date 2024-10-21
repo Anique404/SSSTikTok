@@ -401,13 +401,26 @@
 }
 .text{
     margin-top:40px;
-    width:607px;
+    width:1200px;
     font-weight:800;
-    font-size:20px;
+    font-size:22px;
     margin-left: 30px;
     margin-right: 30px;
 
 }
+
+@media all and (max-width:1024px){
+    .text{
+        margin-top:40px;
+        width:980px;
+        font-weight:600;
+        font-size: 18px;
+        margin-left: 30px;
+        margin-right: 30px;
+    
+    }
+}
+
 
 @media all and (max-width:768px){
     .text{
@@ -487,7 +500,7 @@
 }
 
 .write {
-    width: 1024px; /* Keep the overall width for your content */
+    width: 1300px; /* Keep the overall width for your content */
     justify-content:center;
     align-items:center;
     font-weight:80;
@@ -541,6 +554,66 @@ p {
     align-items:center;
     font-weight:80;
     font-size:20px;
+}
+
+@media all and (max-width:1024px){
+
+    .write {
+        width: 1024px; /* Keep the overall width for your content */
+        justify-content:center;
+        align-items:center;
+        font-weight:60;
+        font-size:17px;
+        margin-left: 30px;
+        margin-right: 70px;
+    }
+    
+    .mobile {
+        
+        margin-left: 80px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        gap:90px;
+        justify-content:center;
+        align-items:center;
+        margin-bottom: 40px;
+    
+        
+    }
+    
+    
+    .content {
+        justify-content:center;
+        align-items:center;
+        flex: 1; /* Allow the content to take remaining space */
+         /* Minimal left margin to create space between image and content */
+    }
+    
+    .img {
+        flex: 0 0 auto; /* Prevent the image from growing */
+    }
+    
+    img {
+        max-width: 300px; /* Set a maximum width for images */
+        height: 200px; /* Maintain image height */
+    }
+    
+    h2 {
+        margin: 10px 0;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    
+    p {
+        margin: 5px 0;
+        line-height: 1.5;
+        justify-content:center;
+        align-items:center;
+        font-weight:80;
+        font-size:20px;
+    }
 }
 
 
