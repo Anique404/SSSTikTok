@@ -1,20 +1,5 @@
 {% include "header.html" %}
-<div class="upper">
-    <h1 id="main-title">SSSTikTok</h1>
-    <h3 id="subtitle">TikTok Video Downloader Without Watermark</h3>
-    <form action="/download" method="post" onsubmit="showProgress();">
-        <input id="mainMessage" type="text" name="url" placeholder="Enter TikTok Video URL" required>
-        <button type="submit" class="bt"><i class="fas fa-download"></i>Download</button>
-    </form>
 
-    <div id="progress-container" style="display: none;">
-        <div id="progress-bar" style="width: 0%;"></div>
-    </div>
-
-    {% if message %}
-    <p class="message {{ 'success' if 'successfully' in message else 'error' }}">{{ message }}</p>
-    {% endif %}
-</div>
 <header>
     <br><br>
     <br>
