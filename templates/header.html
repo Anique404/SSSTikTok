@@ -69,6 +69,8 @@
             color: white; /* Light text for better visibility */
         }
 
+       
+
         
         .upper {
             display: flex;
@@ -86,6 +88,7 @@
         input[type="text"] {
             padding: 15px;
             margin-right: 10px;
+          
             width: 700px;
             border-radius: 10px;
             border: 2px solid black;
@@ -114,6 +117,58 @@
             background-color: green;
         }
        
+        @media (max-width: 768px) {
+            .upper {
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                justify-content: center;
+                align-items: center;
+                height: 300px;
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite; /* Gradient animation */
+                color: white; /* Change text color for better visibility */
+                font-size: 15px;
+                font-weight: 600;
+            }
+        
+            .search {
+                display: flex;
+                flex-direction: row; 
+                justify-content: center; /* Center the content */
+                align-items: center; /* Align items vertically */
+                margin-top: 20px; /* Optional: Add some spacing */
+            }
+        
+            input[type="text"] {
+                box-sizing: border-box; /* Include padding and border in width */
+                padding: 15px;
+                margin-right: 10px; /* Space between input and button */
+                max-width: 500px; /* Ensure it doesn't get too wide */
+                border-radius: 10px;
+                border: 2px solid black;
+                transition: background-color 0.3s, color 0.3s; /* Transition effect */
+                background-image: url('download.png');
+                background-size: cover; /* Optional: adjust background image size */
+            }
+        
+            .bt {
+                background-color: #4CAF50; /* Green background */
+                color: white; /* White text */
+                border: none; /* Remove borders */
+                padding: 15px 25px; /* Padding */
+                cursor: pointer; /* Mouse pointer on hover */
+                display: inline-flex; /* To ensure the icon and text are aligned */
+                align-items: center; /* Align the icon and text vertically */
+                gap: 5px; /* Space between icon and text */
+                border-radius: 20px;
+                transition: background-color 0.3s; /* Transition effect for button hover */
+            }
+        }
+        
+        
+        
+        
     
        
         
@@ -231,6 +286,28 @@
             color: blue; /* Change color on hover */
         }
       
+        @media (max-width:768) {
+            footer {
+                display: flex;
+                flex-direction: column; /* Stack content vertically */
+                justify-content: center; /* Center content */
+                align-items: center; /* Center horizontally */
+                background-color: white;
+                color: black;
+                padding: 20px; /* Padding around the footer */
+                height: 120px; /* Increased height for better spacing */
+                margin-top: 10px; /* Space above the footer */
+                box-shadow: 0 -8px 15px rgba(0, 0, 0, 0); /* Deep shadow above the footer */
+                border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
+            }
+            .footer-right {
+                display: flex;
+                gap: 70px; /* Space between the links */
+                margin-top: 20px; /* Space between the text and the links */
+                font-weight:70;
+                font-size:20px;
+            }
+        }
 
 
 /* Dark mode styles */
@@ -274,6 +351,22 @@
 }
 
 
+@media (max-width:768px){
+    .steps{
+        width:600px;
+        height:400px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite; /* Gradient animation */
+        margin-top:40px;
+        margin-bottom:40px;
+        border-radius:30px;
+        
+    }
+
+}
+
+
 .sol{
     padding-top:30px;
     padding-bottom:30px;
@@ -283,18 +376,18 @@
 }
 
 .write {
-    width: 1300px; /* Keep the overall width for your content */
+    width: 1024px; /* Keep the overall width for your content */
     justify-content:center;
     align-items:center;
     font-weight:80;
     font-size:20px;
-    margin-left: 70px;
+    margin-left: 30px;
     margin-right: 70px;
 }
 
 .mobile {
     
-    margin-left: 120px;
+    margin-left: 80px;
     margin-right: 40px;
     display: flex;
     flex-direction: row;
@@ -305,9 +398,6 @@
 
     
 }
-
-
-
 
 
 .content {
@@ -342,6 +432,69 @@ p {
     font-size:20px;
 }
 
+
+@media (max-width:768px){
+
+    .write {
+        width: 768px; /* Keep the overall width for your content */
+        justify-content:center;
+        align-items:center;
+        font-weight:60;
+        font-size:17px;
+        margin-left: 30px;
+        margin-right: 70px;
+    }
+    
+    .mobile {
+        
+        margin-left: 80px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: row;
+        gap:90px;
+        justify-content:center;
+        align-items:center;
+        margin-bottom: 40px;
+    
+        
+    }
+    
+    
+    .content {
+        justify-content:center;
+        align-items:center;
+        flex: 1; /* Allow the content to take remaining space */
+         /* Minimal left margin to create space between image and content */
+    }
+    
+    .img {
+        flex: 0 0 auto; /* Prevent the image from growing */
+    }
+    
+    img {
+        max-width: 300px; /* Set a maximum width for images */
+        height: 200px; /* Maintain image height */
+    }
+    
+    h2 {
+        margin: 10px 0;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    
+    p {
+        margin: 5px 0;
+        line-height: 1.5;
+        justify-content:center;
+        align-items:center;
+        font-weight:80;
+        font-size:20px;
+    }
+
+
+
+}
 .service-cards {
     display: flex; /* Use flexbox for layout */
     gap: 40px; /* Space between cards */
@@ -394,6 +547,17 @@ p {
 .questions {
     font-weight: 600; /* Bold */
     font-size: 22px; /* Adjust size as needed */
+}
+
+@media (max-width:768px){
+
+    .FAQ{
+        padding-left:100px;
+        padding-right:100px;
+        font-weight: 600; /* Bold */
+        font-size: 18px; /* Adjust size as needed */
+    }
+    
 }
 
 
