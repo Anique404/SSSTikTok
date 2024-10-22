@@ -1438,6 +1438,48 @@ p {
 
 }
 
+@media all and (min-width: 375px) and (max-width: 426px){
+    .keyfeature{
+     font-weight: 600; /* Bold */
+     font-size: 18px; /* Adjust size as needed */
+    }
+
+ .service-cards {
+     display: flex; /* Use flexbox for layout */
+     flex-direction:column;
+     gap: 40px; /* Space between cards */
+     max-width: 426px; /* Optional: limit the max width */
+     justify-content: center; /* Center the cards */
+     align-items: flex-start; /* Align items at the start of the container */
+     padding-left: 25px; /* Left padding */
+     padding-right: 25px; /* Right padding */
+     margin-bottom: 50px;
+ }
+ .service-card p{
+     font-weight: 400; /* Bold */
+     font-size: 16px; /* Adjust size as needed */
+ }
+ .icon {
+    margin: 20px; /* Space below icon */
+    width: 90px; /* Width of the icon background */
+    height: 70px; /* Height of the icon background */
+    border-radius: 200px; /* Rounded corners */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; /* Gradient animation */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center icon inside the background */
+    align-items: center; /* Center icon inside the background */
+}
+
+.icon i {
+    font-size: 30px; /* Increase icon size */
+    color: white; /* Icon color */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+}
+
 .FAQ{
     padding-left:200px;
     padding-right:200px;
