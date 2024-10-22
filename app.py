@@ -11,15 +11,15 @@ def homepage():
     return render_template('homepage.html')
 
 
-@app.route('/cotact')
+@app.route('/contact-us')
 def contact():
-    return render_template('cotact.html')
+    return render_template('contact-us.html')
 
-@app.route('/privacy')
+@app.route('/privacy-and-policy')
 def privacy_policy():
     return render_template('privacy.html')
 
-@app.route('/termsandconditions')
+@app.route('/terms-and-conditions')
 def terms_conditions():
     return render_template('termsandconditions.html')
 
