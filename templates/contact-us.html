@@ -9,12 +9,12 @@
             <form id="contact-form">
                 <div class="mb-4">
                     <label class="block text-blue-900 text-sm font-semibold mb-2" for="email" id="email-label">Your contact email</label>
-                    <input type="email" id="email" placeholder="Your email" required 
+                    <input type="email" id="email" name="user_email" placeholder="Your email" required 
                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div class="mb-6">
                     <label class="block text-blue-900 text-sm font-semibold mb-2" for="message" id="message-label">Message or bug report</label>
-                    <textarea id="message" placeholder="Your message" required 
+                    <textarea id="message" name="message" placeholder="Your message" required 
                               class="w-full p-3 border border-gray-300 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 </div>
                 <div class="text-center">
@@ -24,6 +24,7 @@
                     </button>
                 </div>
             </form>
+            
         </div>
     </div>
     <div>
@@ -39,14 +40,20 @@
     
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault();
-    
-            emailjs.sendForm('service_zvz19k8', 'template_6el0krb', this)
+            
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            console.log("Email:", email);
+            console.log("Message:", message);
+        
+            emailjs.sendForm('service_nfowq1a', 'template_6el0krb', this)
                 .then(function() {
                     alert('Message sent successfully!');
                 }, function(error) {
                     alert('Failed to send message. Error: ' + JSON.stringify(error));
                 });
         });
+        
     </script>
     
 
