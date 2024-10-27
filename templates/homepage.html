@@ -226,7 +226,14 @@
             faq5Answer: "When you open the TikTok app, you will see a clip you want to download. On the right side, there is a share option. You need to click on that, and then you will see an option to 'Copy Link.' Select that option, go to SSSTikTok.my, paste the link there, and click on download. This way, your video will be saved.",
             faq6: "When we download this video, where will we find it?",
             faq6Answer: "When you get this video, you will find it in your User Download folder.",
-            
+            serviceDesc: {
+                "service-card-1": "It is a suitable solution for post-editing and publishing videos.",
+                "service-card-2": "It is completely free, and you can get as many videos as you want.",
+                "service-card-3": "There is no requirement to get the video. Just open the website and download the video.",
+                "service-card-4": "You can get TikTok videos without a watermark at MAX speed.",
+                "service-card-5": "Save TikTok videos without a watermark in mp4.",
+                "service-card-6": "SSSTikTok downloader works in every browser."
+            }
             
             
 
@@ -271,7 +278,14 @@
             faq5Answer: "Ketika Anda membuka aplikasi TikTok, Anda akan melihat cuplikan yang ingin Anda unduh. Di sisi kanan, ada opsi berbagi. Anda perlu mengkliknya, dan kemudian Anda akan melihat opsi untuk 'Salin Tautan.' Pilih opsi itu, pergi ke SSSTikTok.my, tempel tautan di sana, dan klik unduh. Dengan cara ini, video Anda akan disimpan.",
             faq6: "Ketika kami mengunduh video ini, di mana kami akan menemukannya?",
             faq6Answer: "Ketika Anda mendapatkan video ini, Anda akan menemukannya di folder Unduhan Pengguna Anda.",
-            
+            serviceDesc: {
+                "service-card-1": "Ini adalah solusi yang cocok untuk pengeditan dan penerbitan video.",
+                "service-card-2": "Ini sepenuhnya gratis, dan Anda dapat mendapatkan sebanyak mungkin video yang Anda inginkan.",
+                "service-card-3": "Tidak ada persyaratan untuk mendapatkan video. Cukup buka situs web dan unduh video.",
+                "service-card-4": "Anda dapat mendapatkan video TikTok tanpa watermark dengan kecepatan MAKSIMAL.",
+                "service-card-5": "Simpan video TikTok tanpa watermark dalam format mp4.",
+                "service-card-6": "Pengunduh SSSTikTok bekerja di setiap browser."
+            }
             
            
 
@@ -316,7 +330,14 @@
             faq5Answer: "Apabila anda membuka aplikasi TikTok, anda akan melihat cuplikan yang ingin anda muat turun. Di sebelah kanan, terdapat pilihan berkongsi. Anda perlu mengkliknya, dan kemudian anda akan melihat pilihan untuk 'Salin Pautan.' Pilih pilihan itu, pergi ke SSSTikTok.my, tampal pautan di sana, dan klik muat turun. Dengan cara ini, video anda akan disimpan.",
             faq6: "Apabila kami memuat turun video ini, di mana kami akan menemuinya?",
             faq6Answer: "Apabila anda mendapatkan video ini, anda akan menemuinya di folder Muat Turun Pengguna anda.",
-
+            serviceDesc: {
+                "service-card-1": "Ini adalah penyelesaian yang sesuai untuk pengeditan dan penerbitan video.",
+                "service-card-2": "Ia sepenuhnya percuma, dan anda boleh mendapatkan sebanyak mungkin video yang anda mahu.",
+                "service-card-3": "Tiada syarat untuk mendapatkan video. Cukup buka laman web dan muat turun video.",
+                "service-card-4": "Anda boleh mendapatkan video TikTok tanpa watermark dengan kelajuan MAX.",
+                "service-card-5": "Simpan video TikTok tanpa watermark dalam format mp4.",
+                "service-card-6": "Pemuat turun SSSTikTok berfungsi di setiap pelayar."
+            }
             
             
         }
@@ -377,7 +398,16 @@
             document.getElementById('faq-6').textContent = translation.faq6;
             document.getElementById('faq-6-answer').textContent = translation.faq6Answer;
 
-
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card) => {
+                const cardId = card.id; // e.g., "service-card-1"
+                const serviceDescKey = `serviceDesc.${cardId}`;
+                const description = translation.serviceDesc[cardId];
+        
+                if (description) {
+                    card.querySelector('p').textContent = description; // Assuming each card has a <p> for description
+                }
+            });
            
             
         }
