@@ -4,7 +4,9 @@
 
 <header>
     <br><br><br>
-    <center><h1 class="privacy"id="heading">Privacy Policy for SSSTikTok</h1></center>
+    <center><h1 class="privacy"id="heading">Privacy Policy for 
+    <a href="{{ url_for('homepage') }}">www.ssstiktok.my</a>
+    </h1></center>
 </header>
 
 <main class="article-section">
@@ -54,53 +56,19 @@
 
 
 
-<script>
-    function showProgress() {
-        const progressContainer = document.getElementById("progress-container");
-        const progressBar = document.getElementById("progress-bar");
-        const messageElement = document.querySelector(".message");
-
-        // Reset message visibility
-        if (messageElement) {
-            messageElement.style.display = "none"; // Hide message on new download
-        }
-
-        progressBar.style.width = '0%';  // Reset the progress bar
-        progressContainer.style.display = "block";  // Show the progress container
-
-        // Simulate progress updates (this should be linked to your actual progress)
-        let progress = 0;
-        const interval = setInterval(() => {
-            if (progress < 100) {
-                progress++;
-                progressBar.style.width = progress + "%";
-                progressBar.textContent = progress + "%";
-            } else {
-                clearInterval(interval);
-                alert("Your video is successfully downloaded!"); // You can replace this with your message logic
-            }
-        }, 100);  // Adjust timing as necessary
-    }
-</script>
 
 
 <script>
     const translations = {
         en: {
-            title: "SSSTikTok",
-            subtitle: "TikTok Video Downloader Without Watermark",
-            button: "Download",
-            success: "Download successful!",
-            error: "An error occurred.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. All rights reserved.",
-            mainMessage: "Enter TikTok Video URL",
             contact: "Contact",
             privacyPolicy: "Privacy Policy",
             terms: "Terms and Conditions",
-            button: "Download",
+
             
             
-            privacyPolicyTitle: "Privacy Policy for SSSTikTok",
+            privacyPolicyTitle: "Privacy Policy for <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             valuePrivacyTitle: "At SSSTikTok, we value your privacy.",
             valuePrivacyDescription: "This Privacy Policy explains how we collect, use, and protect your information when you use our website.",
             valueInfoCollect: "1. Information We Collect",
@@ -125,19 +93,12 @@
             
         },
         id: {
-            title: "SSSTikTok",
-            subtitle: "Pengunduh Video TikTok Tanpa Watermark",
-            button: "Unduh",
-            success: "Unduh berhasil!",
-            error: "Terjadi kesalahan.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak dilindungi.",
-            mainMessage: "Masukkan URL Video TikTok",
             contact: "Kontak",
             privacyPolicy: "Kebijakan Privasi",
             terms: "Syarat dan Ketentuan",
-            button: "Unduh", 
             
-            privacyPolicyTitle: "Kebijakan Privasi untuk SSSTikTok",
+            privacyPolicyTitle: "Kebijakan Privasi untuk <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             valuePrivacyTitle: "Di SSSTikTok, kami menghargai privasi anda.",
             valuePrivacyDescription: "Kebijakan Privasi ini menerangkan bagaimana kami mengumpul, menggunakan, dan melindungi maklumat anda ketika anda menggunakan laman web kami.",
             valueInfoCollect: "1. Maklumat yang Kami Kumpul",
@@ -162,19 +123,13 @@
             
         },
         ms: {
-            title: "SSSTikTok",
-            subtitle: "Pengunduh Video TikTok Tanpa Tanda Air",
-            button: "Muat Turun",
-            success: "Muat turun berjaya!",
-            error: "Ralat telah berlaku.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak terpelihara.",
-            mainMessage: "Masukkan URL Video TikTok",
             contact: "Hubungi",
             privacyPolicy: "Dasar Privasi",
             terms: "Terma dan Syarat",
-            button: "Muat Turun",
+           
 
-            privacyPolicyTitle: "Dasar Privasi untuk SSSTikTok", 
+            privacyPolicyTitle: "Dasar Privasi untuk <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>", 
             valuePrivacyTitle: "Di SSSTikTok, kami menghargai privasi anda.",
             valuePrivacyDescription: "Dasar Privasi ini menerangkan bagaimana kami mengumpul, menggunakan, dan melindungi maklumat anda ketika anda menggunakan laman web kami.",
             valueInfoCollect: "1. Maklumat yang Kami Kumpul",
@@ -200,19 +155,15 @@
         },
 
         tr: {
-            title: "SSSTikTok",
-            subtitle: "Filtre Su Olmadan TikTok Video İndirme Aracı",
-            button: "İndir",
-            success: "İndirme başarılı!",
-            error: "Bir hata oluştu.",
+            
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Tüm hakları saklıdır.",
-            mainMessage: "TikTok Video URL'sini Girin",
+            
             contact: "İletişim",
             privacyPolicy: "Gizlilik Politikası",
             terms: "Şartlar ve Koşullar",
-            button: "İndir",
+           
         
-            privacyPolicyTitle: "SSSTikTok için Gizlilik Politikası",
+            privacyPolicyTitle: "SSSTikTok için Gizlilik <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             valuePrivacyTitle: "SSSTikTok'ta, gizliliğinize değer veriyoruz.",
             valuePrivacyDescription: "Bu Gizlilik Politikası, web sitemizi kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
             valueInfoCollect: "1. Topladığımız Bilgiler",
@@ -247,16 +198,14 @@
         const translation = translations[selectedLanguage];
 
         if (translation) {
-            document.getElementById('main-title').textContent = translation.title;
-            document.getElementById('subtitle').textContent = translation.subtitle;
+
             document.getElementById('footer-text').innerHTML = translation.footer;
             document.getElementById('contact-link').textContent = translation.contact;
             document.getElementById('privacy-policy-link').textContent = translation.privacyPolicy;
             document.getElementById('terms-link').textContent = translation.terms;
-            document.getElementById('mainMessage').placeholder = translation.mainMessage;
-            document.querySelector('.bt').textContent = translation.button;
 
-            document.getElementById('heading').textContent = translation.privacyPolicyTitle;
+
+            document.getElementById('heading').innerHTML = translation.privacyPolicyTitle;
             document.getElementById('value-privacy-title').textContent = translation.valuePrivacyTitle;
             document.getElementById('value-privacy-description').textContent = translation.valuePrivacyDescription;
             document.getElementById('value-info-collect').textContent = translation.valueInfoCollect;

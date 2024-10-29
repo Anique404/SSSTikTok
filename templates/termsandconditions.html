@@ -3,7 +3,8 @@
 <header>
     <br><br>
     <br>
-    <center><h1 class="privacy" id="terms-title">Terms and Conditions for SSSTikTok</h1></center>
+    <center><h1 class="privacy" id="terms-title">Terms and Conditions for <a href="{{ url_for('homepage') }}">www.ssstiktok.my</a>
+    </h1></center>
 </header>
 
 <main class="article-section">
@@ -72,21 +73,14 @@
 <script>
     const translations = {
         en: {
-            title: "SSSTikTok",
-            subtitle: "TikTok Video Downloader Without Watermark",
-            button: "Download",
-            success: "Download successful!",
-            error: "An error occurred.",
+            
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. All rights reserved.",
-            mainMessage: "Enter TikTok Video URL",
             contact: "Contact",
             privacyPolicy: "Privacy Policy",
             terms: "Terms and Conditions",
-            button: "Download",
-            
            
 
-            termsTitle: "Terms and Conditions for SSSTikTok",
+            termsTitle: "Terms and Conditions for <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             welcomeTitle: "Welcome to SSSTikTok!",
             welcomeText: "By using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.",
             acceptanceTitle: "1. Acceptance of Terms",
@@ -102,19 +96,12 @@
             
         },
         id: {
-            title: "SSSTikTok",
-            subtitle: "Pengunduh Video TikTok Tanpa Watermark",
-            button: "Unduh",
-            success: "Unduh berhasil!",
-            error: "Terjadi kesalahan.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak dilindungi.",
-            mainMessage: "Masukkan URL Video TikTok",
             contact: "Kontak",
             privacyPolicy: "Kebijakan Privasi",
             terms: "Syarat dan Ketentuan",
-            button: "Unduh",
             
-
+            termsTitle: "SSSTikTok için Şartlar ve <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             welcomeTitle: "Selamat datang di SSSTikTok!",
             welcomeText: "Dengan menggunakan situs kami, Anda setuju untuk mematuhi dan terikat oleh syarat dan ketentuan berikut. Harap baca dengan teliti.",
             acceptanceTitle: "1. Penerimaan Syarat",
@@ -130,19 +117,12 @@
 
         },
         ms: {
-            title: "SSSTikTok",
-            subtitle: "Pengunduh Video TikTok Tanpa Tanda Air",
-            button: "Muat Turun",
-            success: "Muat turun berjaya!",
-            error: "Ralat telah berlaku.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Semua hak terpelihara.",
-            mainMessage: "Masukkan URL Video TikTok",
             contact: "Hubungi",
             privacyPolicy: "Dasar Privasi",
             terms: "Terma dan Syarat",
-            button: "Muat Turun",
             
-            termsTitle: "Terma dan Syarat untuk SSSTikTok",
+            termsTitle: "Terma dan Syarat untuk <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             welcomeTitle: "Selamat datang di SSSTikTok!",
             welcomeText: "Dengan menggunakan laman web kami, anda bersetuju untuk mematuhi dan terikat oleh terma dan syarat berikut. Sila baca dengan teliti.",
             acceptanceTitle: "1. Penerimaan Terma",
@@ -158,19 +138,12 @@
         },
 
         tr: {
-            title: "SSSTikTok",
-            subtitle: "Filtre Su Olmadan TikTok Video İndirme Aracı",
-            button: "İndir",
-            success: "İndirme başarılı!",
-            error: "Bir hata oluştu.",
             footer: "&copy; 2024 <a href='{{ url_for('homepage') }}'>SSSTikTok</a>. Tüm hakları saklıdır.",
-            mainMessage: "TikTok Video URL'sini Girin",
             contact: "İletişim",
             privacyPolicy: "Gizlilik Politikası",
             terms: "Şartlar ve Koşullar",
-            button: "İndir",
         
-            termsTitle: "SSSTikTok için Şartlar ve Koşullar",
+            termsTitle: "SSSTikTok için Şartlar <a href='{{ url_for('homepage') }}'>www.ssstiktok.my</a>",
             welcomeTitle: "SSSTikTok'a Hoş Geldiniz!",
             welcomeText: "Web sitemizi kullanarak, aşağıdaki şartlar ve koşullara uymayı kabul ediyorsunuz. Lütfen dikkatlice okuyun.",
             acceptanceTitle: "1. Şartların Kabulü",
@@ -196,16 +169,12 @@
         const translation = translations[selectedLanguage];
 
         if (translation) {
-            document.getElementById('main-title').textContent = translation.title;
-            document.getElementById('subtitle').textContent = translation.subtitle;
             document.getElementById('footer-text').innerHTML = translation.footer;
             document.getElementById('contact-link').textContent = translation.contact;
             document.getElementById('privacy-policy-link').textContent = translation.privacyPolicy;
             document.getElementById('terms-link').textContent = translation.terms;
-            document.getElementById('mainMessage').placeholder = translation.mainMessage;
-            document.querySelector('.bt').textContent = translation.button;
 
-            document.getElementById('terms-title').textContent = translation.termsTitle;
+            document.getElementById('terms-title').innerHTML = translation.termsTitle;
             document.getElementById('welcome-title').textContent = translation.welcomeTitle;
             document.getElementById('welcome-text').textContent = translation.welcomeText;
             document.getElementById('acceptance-title').textContent = translation.acceptanceTitle;

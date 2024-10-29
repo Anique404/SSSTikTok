@@ -39,6 +39,9 @@
             align-items: center; /* Center titles vertically */
             gap: 20px; /* Space between Snap and Tik */
         }
+        .header a {
+            text-decoration: none; /* Remove underline */
+        }
 
         .snap {
             color: blue;
@@ -633,11 +636,13 @@
             height: 120px; /* Increased height for better spacing */
             margin-top: 10px; /* Space above the footer */
             box-shadow: 0 -8px 15px rgba(0, 0, 0, 0); /* Deep shadow above the footer */
-            border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
+            border-top: 1px solid #ccc;
         }
         
         footer p {
             margin: 0; /* Remove default margin */
+            font-weight:400;
+            font-size:18px;
             
         }
         
@@ -645,13 +650,17 @@
             display: flex;
             gap: 90px; /* Space between the links */
             margin-top: 20px; /* Space between the text and the links */
-            font-weight:70;
+            font-weight:400;
             font-size:20px;
+            margin-left:20px;
         }
         
         .footer-right a {
             text-decoration: none;
             color: black; /* Link color */
+            font-weight:400;
+            font-size:20px;
+            
         }
         
         .footer-right a:hover {
@@ -670,16 +679,31 @@
                 height: 120px; /* Increased height for better spacing */
                 margin-top: 10px; /* Space above the footer */
                 box-shadow: 0 -8px 15px rgba(0, 0, 0, 0); /* Deep shadow above the footer */
-                border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
-                font-weight:70;
-                font-size:20px;
+                border-top: 1px solid #ccc; /* Optional: Add a top border for 
             }
-            .footer-right {
-                display: flex;
-                gap: 70px; /* Space between the links */
-                margin-top: 20px; /* Space between the text and the links */
-                
-            }
+             footer p {
+            margin: 0; /* Remove default margin */
+            font-weight:400;
+            font-size:18px;
+            
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 70px; /* Space between the links */
+            margin-top: 20px; /* Space between the text and the links */
+            font-weight:400;
+            font-size:20px;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .footer-right a {
+            text-decoration: none;
+            color: black; /* Link color */
+            font-weight:400;
+            font-size:20px;
+        }
         }
 
         @media all and (max-width:608px) {
@@ -698,12 +722,29 @@
                 font-weight:70;
                 font-size:18px;
             }
-            .footer-right {
-                display: flex;
-                gap: 60px; /* Space between the links */
-                margin-top: 20px; /* Space between the text and the links */
-              
-            }
+             footer p {
+            margin: 0; /* Remove default margin */
+            font-weight:400;
+            font-size:18px;
+            
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 60px; /* Space between the links */
+            margin-top: 20px; /* Space between the text and the links */
+            font-weight:400;
+            font-size:20px;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .footer-right a {
+            text-decoration: none;
+            color: black; /* Link color */
+            font-weight:400;
+            font-size:20px;
+        }
         }
         @media all and (max-width:426px) {
             footer {
@@ -720,20 +761,30 @@
                 border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
                 
             }
-            .footertext{
-                font-weight:60;
-                font-size:16px;
-
-            }
-            .footer-right {
-                display: flex;
-                gap: 20px; /* Space between the links */
-                margin-left: 30px;
-                margin-top: 20px; /* Space between the text and the links */
-                font-weight:60;
-                font-size:16px;
-                
-            }
+             footer p {
+            margin: 0; /* Remove default margin */
+            font-weight:400;
+            font-size:18px;
+            
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 20px; /* Space between the links */
+            margin-top: 20px; /* Space between the text and the links */
+            font-weight:400;
+            font-size:20px
+            justify-content:center;
+            align-items:center;
+            
+        }
+        
+        .footer-right a {
+            text-decoration: none;
+            color: black; /* Link color */
+            font-weight:400;
+            font-size:20px;
+        }
         }
 
         @media all and (max-width:376px) {
@@ -748,25 +799,33 @@
                 height: 120px; /* Increased height for better spacing */
                 margin-top: 10px; /* Space above the footer */
                 box-shadow: 0 -8px 15px rgba(0, 0, 0, 0); /* Deep shadow above the footer */
-                border-top: 1px solid #ccc; /* Optional: Add a top border for separation */
-                font-weight:60;
-                font-size:10px;
+                border-top: 1px solid #ccc; /* Optional: Add a top border for 
                 
             }
-            .footertext{
-                font-weight:60;
-                font-size:15px;
-
-            }
-            .footer-right {
-                display: flex;
-                gap: 20px; /* Space between the links */
-                margin-left: 30px;
-                margin-top: 20px; /* Space between the text and the links */
-                font-weight:40;
-                font-size:14px;
-                
-            }
+            
+             footer p {
+            margin: 0; /* Remove default margin */
+            font-weight:400;
+            font-size:18px;
+            
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 20px; /* Space between the links */
+            margin-top: 20px; /* Space between the text and the links */
+            font-weight:400;
+            font-size:20px;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .footer-right a {
+            text-decoration: none;
+            color: black; /* Link color */
+            font-weight:400;
+            font-size:20px;
+        }
         }
 
 
@@ -788,74 +847,82 @@
     color:white;
 
 }
-.text{
-    margin-top:40px;
-    width:1200px;
-    font-weight:50;
-    font-size:20px;
+.text {
+    margin-top: 40px;
+    width: 1200px;
+    font-weight: 600; /* Changed to standard weight */
+    font-size: 20px;
     margin-left: 30px;
     margin-right: 30px;
-
 }
 
-@media all and (min-width:1024px) and (max-width:1440px){
-    .text{
-        margin-top:40px;
-        width:980px;
-        font-weight:50;
+.text p {
+    font-weight: 500; /* Normal weight */
+    font-size: 20px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+    .text {
+        width: 980px;
+        font-weight: 600; /* Changed to standard weight */
         font-size: 18px;
-        margin-left: 30px;
-        margin-right: 30px;
-    
+    }
+
+    .text p {
+        font-weight: 400; /* Normal weight */
+        font-size: 20px;
     }
 }
 
-
-@media all and (min-width:768px) and (max-width:1024px){
-    .text{
-        margin-top:40px;
-        width:700px;
-        font-weight:50;
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .text {
+        width: 700px;
+        font-weight: 600; /* Changed to standard weight */
         font-size: 18px;
-        margin-left: 30px;
-        margin-right: 30px;
-    
+    }
+
+    .text p {
+        font-weight: 400; /* Normal weight */
+        font-size: 20px;
     }
 }
 
-@media all and (min-width:608px) and (max-width:768px){
-    .text{
-        margin-top:40px;
+@media all and (min-width: 608px) and (max-width: 768px) {
+    .text {
         width: 570px;
-        font-weight:40;
-        font-size:15px;
-        margin-left: 30px;
-        margin-right: 30px;
-    
+        font-weight: 600; /* Changed to standard weight */
+        font-size: 18px;
     }
+
+    .text p {
+        font-size: 20px; /* Ensure this size is what you want */
+        font-weight: 400; /* Normal weight */   
+        }
 }
 
-@media all and (min-width:426px) and (max-width:608px){
-    .text{
-        margin-top:40px;
+@media all and (min-width: 426px) and (max-width: 608px) {
+    .text {
         width: 400px;
-        font-weight:40;
-        font-size:15px;
-        margin-left: 13px;
-        margin-right: 13px;
-    
+        font-weight: 600; /* Changed to standard weight */
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 20px;
+        font-weight: 400; /* Standard weight */
     }
 }
 
-@media all and (min-width:375px) and (max-width:426px){
-    .text{
-        margin-top:40px;
+@media all and (min-width: 375px) and (max-width: 426px) {
+    .text {
         width: 340px;
-        font-weight:40;
-        font-size:13px;
-        margin-left: 23px;
-        margin-right: 23px;
-    
+        font-weight: 600; /* Changed to standard weight */
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 20px;
+        font-weight: 400; /* Standard weight */
     }
 }
 
@@ -913,14 +980,14 @@
 @media all and (min-width: 426px) and (max-width:608px){
     .steps{
         width:350px;
-        height:550px;
+        height:500px;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite; /* Gradient animation */
         margin-top:40px;
         margin-bottom:40px;
         border-radius:30px;
-        font-weight:400;
+        font-weight:50;
         font-size:15px;
         
     }
@@ -930,14 +997,14 @@
 @media all and (min-width: 375px) and (max-width:426px){
     .steps{
         width:340px;
-        height:600px;
+        height:550px;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #249177, #00527b, #286863);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite; /* Gradient animation */
         margin-top:40px;
         margin-bottom:40px;
         border-radius:30px;
-        font-weight:400;
+        font-weight:50;
         font-size:15px;
         
     }
@@ -1018,7 +1085,7 @@ p {
         width: 1024px; /* Keep the overall width for your content */
         justify-content:center;
         align-items:center;
-        font-weight:60;
+        font-weight:600;
         font-size:17px;
         margin-left: 30px;
         margin-right: 70px;
@@ -1062,12 +1129,12 @@ p {
         
     }
     
-    p {
+    .content p {
         margin: 5px 0;
         line-height: 1.5;
         justify-content:center;
         align-items:center;
-        font-weight:80;
+        font-weight:400;
         font-size:20px;
     }
 }
@@ -1079,7 +1146,7 @@ p {
         width: 768px; /* Keep the overall width for your content */
         justify-content:center;
         align-items:center;
-        font-weight:60;
+        font-weight:600;
         font-size:17px;
         margin-left: 30px;
         margin-right: 70px;
@@ -1123,12 +1190,12 @@ p {
         
     }
     
-    p {
+    .content p {
         margin: 5px 0;
         line-height: 1.5;
         justify-content:center;
         align-items:center;
-        font-weight:80;
+        font-weight:400;
         font-size:20px;
     }
 }
@@ -1139,7 +1206,7 @@ p {
         width: 608px; /* Keep the overall width for your content */
         justify-content:center;
         align-items:center;
-        font-weight:40;
+        font-weight:500;
         font-size:15px;
         margin-left: 30px;
         margin-right: 70px;
@@ -1181,12 +1248,12 @@ p {
         
     }
     
-    p {
+    .content p {
         margin: 5px 0;
         line-height: 1.5;
         justify-content:center;
         align-items:center;
-        font-weight:80;
+        font-weight:400;
         font-size:20px;
     }
 }
@@ -1197,7 +1264,7 @@ p {
         width: 426px; /* Keep the overall width for your content */
         justify-content:center;
         align-items:center;
-        font-weight:40;
+        font-weight:500;
         font-size:15px;
         margin-left: 13px;
         margin-right: 13px;
@@ -1239,12 +1306,12 @@ p {
         
     }
     
-    p {
+   .content p {
         margin: 5px 0;
         line-height: 1.5;
         justify-content:center;
         align-items:center;
-        font-weight:80;
+        font-weight:400;
         font-size:20px;
     }
 }
@@ -1256,7 +1323,7 @@ p {
         width: 376px; /* Keep the overall width for your content */
         justify-content:center;
         align-items:center;
-        font-weight:40;
+        font-weight:500;
         font-size:15px;
         margin-left: 13px;
         margin-right: 13px;
@@ -1298,12 +1365,12 @@ p {
         
     }
     
-    p {
+    .content p {
         margin: 5px 0;
         line-height: 1.5;
         justify-content:center;
         align-items:center;
-        font-weight:80;
+        font-weight:400;
         font-size:20px;
     }
 }
@@ -1491,7 +1558,10 @@ p {
     font-weight: 600; /* Bold */
     font-size: 22px; /* Adjust size as needed */
 }
-
+.FAQ p{
+    font-weight: 400; /* Bold */
+    font-size: 18px; /* Adjust size as needed */
+}
 @media all and (max-width:768px){
 
     .FAQ{
@@ -1500,6 +1570,10 @@ p {
         font-weight: 600; /* Bold */
         font-size: 18px; /* Adjust size as needed */
     }
+    .FAQ p{
+    font-weight: 400; /* Bold */
+    font-size: 18px; /* Adjust size as needed */
+}
     
 }
 @media all and (max-width:608px){
@@ -1507,9 +1581,13 @@ p {
     .FAQ{
         padding-left:100px;
         padding-right:100px;
-        font-weight: 400; /* Bold */
+        font-weight: 600; /* Bold */
         font-size: 18px; /* Adjust size as needed */
     }
+    .FAQ p{
+    font-weight: 400; /* Bold */
+    font-size: 18px; /* Adjust size as needed */
+}
     
 }
 
@@ -1518,9 +1596,13 @@ p {
     .FAQ{
         padding-left:20px;
         padding-right:20px;
-        font-weight: 400; /* Bold */
-        font-size: 7px; /* Adjust size as needed */
+        font-weight: 600; /* Bold */
+        font-size: 16px; /* Adjust size as needed */
     }
+    .FAQ p{
+    font-weight: 400; /* Bold */
+    font-size: 18px; /* Adjust size as needed */
+}
     
 }
 
@@ -1529,10 +1611,20 @@ p {
     .FAQ{
         padding-left:20px;
         padding-right:20px;
-        font-weight: 400; /* Bold */
-        font-size: 7px; /* Adjust size as needed */
+        font-weight: 600; /* Bold */
+        font-size: 16px; /* Adjust size as needed */
     }
+    .FAQ p{
+    font-weight: 400; /* Bold */
+    font-size: 18px; /* Adjust size as needed */
+}
     
+}
+
+.privacy{
+    font-size:30px;
+    font-weight:800;
+
 }
 
 .article-section{
@@ -1541,15 +1633,22 @@ p {
     padding-right:100px;
     padding-top:20px;
     padding-bottom:50px;
+    
 }
+
+
+.article-section p {
+        font-size:18px;
+        font-weight:400;
+    }
 
 
 
 @media all and (max-width:426px){
     .privacy{
 
-        font-size:22px;
-        font-weight:600;
+        font-size:24px;
+        font-weight:700;
 
     }
 
@@ -1559,16 +1658,21 @@ p {
         padding-right:30px;
         padding-top:20px;
         padding-bottom:50px;
-        font-size:11px;
-        font-weight:300;
+        
+    }
+    
+    
+    .article-section p {
+        font-size:18px;
+        font-weight:400;
     }
     
 }
 
 @media all and (max-width:376px){
     .privacy{
-        font-size:20px;
-        font-weight:600;
+        font-size:24px;
+        font-weight:700;
 
     }
 
@@ -1578,8 +1682,13 @@ p {
         padding-right:20px;
         padding-top:20px;
         padding-bottom:50px;
-        font-size:11px;
-        font-weight:300;
+       
+    }
+    
+     
+    .article-section p {
+        font-size:18px;
+        font-weight:400;
     }
     
 }
@@ -1601,6 +1710,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -1627,7 +1737,7 @@ body {
 }
 
 .max-w-md {
-    max-width: 28rem; /* Max width for the form */
+    max-width: 40rem; /* Max width for the form */
 }
 
 /* Title styles */
@@ -1687,16 +1797,22 @@ button:hover {
     transition: background-color 0.3s; /* Smooth transition */
 }
 
+
+
     </style>
 </head>
 <body>
     
     <header class="header">
+        <a href="{{ url_for('homepage') }}">
         <div class="title-container">
+        
             <h2 id="title-snap" class="snap">SSS</h2>
             <h2 id="title-tik" class="tik">TikTok</h2>
+      
 
         </div>
+    </a>
         <div class="title-contai">
             <button class="reset-button" type="button" role="button" onclick="myFunction()">
                 <i id="mode-icon" class="fas fa-moon"></i>
@@ -1713,21 +1829,4 @@ button:hover {
         </div>
     </header>
 
-    <div class="upper">
-        <h1 id="main-title">SSSTikTok</h1>
-        <br>
-        <h3 id="subtitle">TikTok Video Downloader Without Watermark</h3>
-        <br>
-        <form class="search"action="/download" method="post" onsubmit="showProgress();">
-            <input id="mainMessage" type="text" name="url" placeholder="Enter TikTok Video URL" required>
-            <button type="submit" class="bt"><i class="fas fa-download"></i> Download</button>
-        </form>
     
-        <div id="progress-container" style="display: none;">
-            <div id="progress-bar" style="width: 0%;"></div>
-        </div>
-    
-        {% if message %}
-        <p class="message {{ 'success' if 'successfully' in message else 'error' }}">{{ message }}</p>
-        {% endif %}
-    </div>

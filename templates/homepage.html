@@ -1,6 +1,27 @@
 {% include "header.html" %}
 <main>
     <center>
+        
+        
+    <div class="upper">
+        <h1 id="main-title">SSSTikTok</h1>
+        <br>
+        <h3 id="subtitle">TikTok Video Downloader Without Watermark</h3>
+        <br>
+        <form class="search" action="/" method="post" onsubmit="showProgress();">
+            <input id="mainMessage" type="text" name="url" placeholder="Enter TikTok Video URL" required>
+            <button type="submit" class="bt"><i class="fas fa-download"></i> Download</button>
+        </form>
+    
+        <div id="progress-container" style="display: none;">
+            <div id="progress-bar" style="width: 0%;"></div>
+        </div>
+    
+        {% if message %}
+        <p class="message {{ 'success' if 'successfully' in message else 'error' }}">{{ message }}</p>
+        {% endif %}
+        
+        </div>
 
         <div class="text" id="ssstiktok-description">
             <p>
@@ -35,7 +56,7 @@
         <div class="write">
             <div class="mobile" id="mobile-download">
                 <div class="img">
-                    <img src="/static/Yellow Mobile Book Free Logo .webp "alt="TikTok Download" id="mobile-download-image">
+                    <img src="/static/mobile.webp"alt="TikTok Download" id="mobile-download-image">
                 </div>
                 <div class="content">
                     <center>
@@ -60,7 +81,7 @@
                     </center>
                 </div>
                 <div class="img">
-                    <img src="/static/Blue and Yellow Creative Laptop Care Tips Infographic.webp" alt="TikTok Download" id="pc-download-image">
+                    <img src="/static/laptop.webp" alt="TikTok Download" id="pc-download-image">
                 </div>
             </div>
         </div>
@@ -113,32 +134,32 @@
             <h2 class="faqTitle"id="faqs-title">FAQs</h2>
             <br>
             <div class="FAQ" id="faqs">
-                <p class="questions" id="faq-1">Do I have to pay to get the TikTok videos from your websites?</p>
+                <h3 class="questions" id="faq-1">Do I have to pay to get the TikTok videos from your websites?</h3>
                 <p id="faq-1-answer">No, it is completely free. You do not even need to register to use it, and it works on all modern browsers.</p>
                 <br>
         
-                <p class="questions" id="faq-2">Why should we choose your website and not others?</p>
+                <h3 class="questions" id="faq-2">Why should we choose your website and not others?</h3>
                 <p id="faq-2-answer">Because it is very simple to use. Anyone can easily access this website, and it will provide you HD quality videos.
                     Plus, the sound quality is excellent.
                 </p>
                 <br>
         
-                <p class="questions" id="faq-3">Do I need to install anything to use this website?</p>
+                <h3 class="questions" id="faq-3">Do I need to install anything to use this website?</h3>
                 <p id="faq-3-answer">No, you do not need to install anything to use this website. Additionally, you do not even need to log in to use it. 
                     You can easily get the videos without having to install any software.</p>
                 <br>
         
-                <p class="questions" id="faq-4">Do I need an account to download videos from this website?</p>
+                <h3 class="questions" id="faq-4">Do I need an account to download videos from this website?</h3>
                 <p id="faq-4-answer">No, you do not need an account to download videos from this website. Just provide the link to the clip, and it will save the TikTok clip in a few seconds.</p>
                 <br>
         
-                <p class="questions" id="faq-5">Where can we find the link to a TikTok video?</p>
+                <h3 class="questions" id="faq-5">Where can we find the link to a TikTok video?</h3>
                 <p id="faq-5-answer">When you open the TikTok app, you will see a clip you want to download. On the right side, there is a share option. 
                     You need to click on that, and then you will see an option to "Copy Link." Select that option, go to SSSTikTok.my, paste the link there, and click on download. This way, your video will be saved.
                 </p>
                 <br>
         
-                <p class="questions" id="faq-6">When we download this video, where will we find it?</p>
+                <h3 class="questions" id="faq-6">When we download this video, where will we find it?</h3>
                 <p id="faq-6-answer">When you get this video, you will find it in your User Download folder.</p>
                 <br>
             </div>
