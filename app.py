@@ -23,7 +23,7 @@ def privacy_policy():
 def terms_conditions():
     return render_template('termsandconditions.html')
 
-@app.route('/', methods=['POST'])
+ </script>@app.route('/download', methods=['POST'])
 def download():
     message = None  # Initialize message variable
 
@@ -69,7 +69,7 @@ def download():
             os.chdir(original_cwd)
             message = f"An error occurred: {e}"
 
-    return render_template('homepage.html', message=message)
+    return render_template('homepage.html', message=message) 
 
 if __name__ == '__main__':
     app.run(debug=True)
