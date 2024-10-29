@@ -23,7 +23,7 @@ def privacy_policy():
 def terms_conditions():
     return render_template('termsandconditions.html')
 
- </script>@app.route('/download', methods=['POST'])
+@app.route('/', methods=['POST'])
 def download():
     message = None  # Initialize message variable
 
