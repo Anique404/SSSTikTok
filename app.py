@@ -43,6 +43,9 @@ def download():
         # Set the output file path in the Downloads folder
         output_file = os.path.join(downloads_folder, f"{video_title}.mp4")
 
+        # Specify the Firefox profile path
+        firefox_profile_path = r'C:\Users\OASIS COMPUTERS\AppData\Roaming\Mozilla\Firefox\Profiles\qgd5o49y.default-release'
+
         try:
             # Temporarily change the working directory to the Downloads folder
             original_cwd = os.getcwd()  # Store the original working directory
